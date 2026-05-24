@@ -2,6 +2,9 @@ import { model, Schema } from 'mongoose';
 
 const productSchema = new Schema(
   {
+    _id: {
+      type: String,
+    },
     name: {
       type: String,
       required: true,
@@ -22,7 +25,8 @@ const productSchema = new Schema(
   },
   {
     timestamps: true,
+    collection: 'products',
   },
 );
 
-export const Product = model('products', productSchema);
+export const Product = model('Product', productSchema);

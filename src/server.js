@@ -17,7 +17,7 @@ app.use(pino());
 
 await connectMongoDB();
 
-app.use(productsRouter);
+app.use('/', productsRouter);
 app.use(notFoundHandler);
 
 app.use(errorHandler);
